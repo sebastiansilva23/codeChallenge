@@ -13,12 +13,9 @@ function enviarDatos() {
         })
     })
     .then(respuesta => respuesta.json())
-    .then(datos => {
-        document.getElementById('nombre').value = "";
-        document.getElementById('apellido').value = "";
-        document.getElementById('fechaNacimiento').value;
-        alert("Se envió correctamente");
-    })
+    .then((data) => {
+        console.log("Respuesta del servidor:", data);
+      })
     .catch(error => {
         alert("Hubo un error al enviar los datos");
         console.error(error);
